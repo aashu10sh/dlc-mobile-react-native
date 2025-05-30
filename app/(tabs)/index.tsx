@@ -1,8 +1,14 @@
-import ClassCard from "@/components/cards/class/Class";
+import ClassCard from "@/components/ui/cards/class/Class";
 import ClassService from "@/lib/classService";
 import { ClassEntity } from "@/lib/entities/classEntity";
 import { Suspense, useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function HomeScreen() {
   const [classes, setClasses] = useState<ClassEntity[]>([]);
@@ -27,13 +33,12 @@ export default function HomeScreen() {
         All Available Classes
       </Text>
 
-
       <Suspense fallback={<Text>Loading classes...</Text>}>
         {classes?.map((class_: ClassEntity) => (
           <View style={styles.cardWrapper} key={class_.id}>
-            <TouchableOpacity>
-            <ClassCard boxColor="21" classNumber={Number(class_.grades)} />
-          </TouchableOpacity>
+            <TouchableOpacity >
+              <ClassCard boxColor="21" classNumber={Number(class_.grades)} />
+            </TouchableOpacity>
           </View>
         ))}
       </Suspense>

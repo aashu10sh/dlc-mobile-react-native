@@ -2,11 +2,9 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
 
-
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function TabLayout() {
-
   return (
     <Tabs
       screenOptions={{
@@ -18,7 +16,7 @@ export default function TabLayout() {
           },
           default: {},
         }),
-        headerTitle: "Deerwalk Learning Center - Bats"
+        headerTitle: "Deerwalk Learning Center - Bats",
       }}
     >
       <Tabs.Screen
