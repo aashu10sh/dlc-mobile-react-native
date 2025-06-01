@@ -1,7 +1,7 @@
 import ClassCard from "@/components/ui/cards/class/Class";
 import ClassService from "@/lib/classService";
 import { ClassEntity } from "@/lib/entities/classEntity";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ScrollView,
   StyleSheet,
@@ -33,15 +33,17 @@ export default function HomeScreen() {
         All Available Classes
       </Text>
 
-      <Suspense fallback={<Text>Loading classes...</Text>}>
-        {classes?.map((class_: ClassEntity) => (
+      {classes.length === 0 ? (
+        <Text style={{ color: "white" }}> Loading Classes... </Text>
+      ) : (
+        classes?.map((class_: ClassEntity) => (
           <View style={styles.cardWrapper} key={class_.id}>
-            <TouchableOpacity >
+            <TouchableOpacity>
               <ClassCard boxColor="21" classNumber={Number(class_.grades)} />
             </TouchableOpacity>
           </View>
-        ))}
-      </Suspense>
+        ))
+      )}
     </ScrollView>
   );
 }

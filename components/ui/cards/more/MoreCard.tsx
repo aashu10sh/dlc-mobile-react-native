@@ -12,6 +12,7 @@ interface Props {
   Icon: ComponentType<IconProps>;
   iconName: string;
   text: string;
+  redirectTo: string;
 }
 
 export default function MoreCard(props: Props) {
