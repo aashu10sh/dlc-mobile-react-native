@@ -75,6 +75,7 @@ export default function MoreScreen() {
           <Pressable
             key={index}
             style={{ marginBottom: 30 }}
+            // @ts-ignore
             onPress={() => router.push(item.redirectTo)}
           >
             <MoreCard

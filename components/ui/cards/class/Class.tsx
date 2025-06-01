@@ -1,12 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function ClassCard({
-  classNumber,
-  boxColor,
-}: {
-  classNumber: number;
-  boxColor: string;
-}) {
+export default function ClassCard({ classNumber }: { classNumber: number }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{classNumber}</Text>

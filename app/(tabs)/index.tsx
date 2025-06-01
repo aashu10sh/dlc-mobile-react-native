@@ -39,7 +39,7 @@ export default function HomeScreen() {
         classes?.map((class_: ClassEntity) => (
           <View style={styles.cardWrapper} key={class_.id}>
             <TouchableOpacity>
-              <ClassCard boxColor="21" classNumber={Number(class_.grades)} />
+              <ClassCard classNumber={Number(class_.grades)} />
             </TouchableOpacity>
           </View>
         ))
