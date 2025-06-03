@@ -19,7 +19,7 @@ export default function TeacherCard(props: Props) {
       />
       <View style={styles.textContainer}>
         <View>
-            <Text style={styles.text}> {props.teacher.name}</Text>
+          <Text style={styles.text}> {props.teacher.name}</Text>
         </View>
         <Link href={`mailto:${props.teacher.email}`}>
           <Fontisto name="email" color={"white"} size={20} />
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 30,
-    gap:10
+    gap: 10,
     // width: '60%'
   },
   textContainer: {
